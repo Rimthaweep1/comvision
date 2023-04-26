@@ -6,10 +6,10 @@ from PIL import ExifTags, Image, ImageOps
 
 
 model = torch.hub.load('ultralytics/yolov5', 'custom', path='sign.pt')
-model.conf = 0.25 # NMS confidence threshold
-model.iou = 0.45  # IoU threshold
-model.multi_label = False  # NMS multiple labels per box
-model.max_det = 1000  # maximum number of detections per image
+model.conf = 0.25
+model.iou = 0.45
+model.multi_label = False
+model.max_det = 1000
 
     # detection part
 video = cv2.VideoCapture(0) # Read USB Camera
